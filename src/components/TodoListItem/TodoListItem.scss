@@ -1,0 +1,23 @@
+.todo-list-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  grid-gap: 10px;
+
+  &__text {
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.2s;
+    background-color: transparent;
+
+    &:hover {
+      background-color: #f1f1f1;
+    }
+  }
+
+  &--done {
+    .todo-list-item__text {
+      text-decoration: line-through;
+    }
+  }
+}
