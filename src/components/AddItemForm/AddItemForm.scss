@@ -2,4 +2,13 @@
   display: grid;
   grid-template-columns: 1fr auto;
   grid-gap: 10px;
+  position: relative;
+
+  &__error-msg {
+    position: absolute;
+    bottom: -18px;
+    left: 10px;
+    font-size: 12px;
+    color: #f00;
+  }
 }

@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-// const ErrorOverlayPlugin = require('error-overlay-webpack-plugin')
+const ErrorOverlayPlugin = require('error-overlay-webpack-plugin')
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackBar = require('webpackbar');
@@ -181,8 +181,8 @@ module.exports = {
       title: 'TODO App',
       inject: true,
     }),
-    // new ErrorOverlayPlugin(),
-    buildConfig.isDevelopment && buildConfig.isHmrEnabled && new ReactRefreshWebpackPlugin(),
+    new ErrorOverlayPlugin(),
+    buildConfig.isDevelopment && buildConfig.isHmrEnabled && new ReactRefreshWebpackPlugin({overlay: false}),
     buildConfig.isDevelopment && new CircularDependencyPlugin({
       exclude: /a\.js|node_modules/, // exclude node_modules
       failOnError: false, // show a warning when there is a circular dependency
