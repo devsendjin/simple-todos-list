@@ -162,7 +162,7 @@ module.exports = {
     contentBase: path.resolve(__dirname, 'public'),
     hot: buildConfig.isDevelopment && buildConfig.isHmrEnabled,
     host: 'localhost',
-    port: 3000,
+    port: 3003,
     disableHostCheck: true,
     historyApiFallback: true,
     writeToDisk: false,

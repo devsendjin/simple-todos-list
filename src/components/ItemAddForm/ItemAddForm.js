@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import './AddItemForm.scss';
+import './ItemAddForm.scss';
 import { Input } from '../Input';
 import { Button } from '../Button';
 
-const AddItemForm = ({ addTodo }) => {
+const ItemAddForm = ({ addTodo }) => {
 	const [value, setValue] = useState('');
 	const [errorMsg, setErrorMsg] = useState('');
 
@@ -22,14 +22,14 @@ const AddItemForm = ({ addTodo }) => {
 	};
 
 	return (
-		<form className="add-item-form" onSubmit={ onSubmit }>
+		<form className="item-add-form" onSubmit={ onSubmit }>
 			<Input value={ value } name="item" onChange={ onChange } />
 			<Button type="submit" className="btn-outline-secondary">
 				Add item
 			</Button>
-			{ errorMsg && <span className="add-item-form__error-msg">{ errorMsg }</span> }
+			{ errorMsg && <span className="item-add-form__error-msg">{ errorMsg }</span> }
 		</form>
 	);
 };
 
-export { AddItemForm };
+export { ItemAddForm };

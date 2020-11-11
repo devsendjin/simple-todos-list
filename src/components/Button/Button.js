@@ -1,9 +1,14 @@
 import React from 'react';
-import { cx } from '../../Utils';
+import { cn } from '../../utils';
 
-const Button = ({ type = 'button', className, onClick, children }) => (
-  <button type={type} className={cx('btn', className)} onClick={onClick}>
-    {children}
+const Button = ({ type = 'button', className, onClick, onChange, children }) => (
+  <button
+    type={ type }
+    className={ cn('btn', className) }
+    onClick={ onClick }
+    onChange={ onChange }
+  >
+    { children }
   </button>
 );
 

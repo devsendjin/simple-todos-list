@@ -1,4 +1,11 @@
 .app-container {
 	max-width: 600px;
 	margin: 50px auto 0;
+
+	.top-panel {
+		display: grid;
+		grid-template-columns: 1fr repeat(3, auto);
+		grid-gap: 10px;
+		margin-bottom: 15px;
+	}
 }
